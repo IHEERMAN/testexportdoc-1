@@ -29,7 +29,7 @@ export class AppComponent {
   private DOC_DESCRIPTION:string="หนังสือบันทึกข้อความภายใน มหาวิทยาลัยมหาสารคาม";
   private DOC_TITLE:string="หนังสือบันทึกข้อความ ภายใน";
   private FILE_NAME:string="บันทึกข้อความภายใน.docx";
-  private DOC_DEFAULT_FONT:string ="TH Sarabun New";
+  private DOC_DEFAULT_FONT:string ="TH SarabunPSK";
 
   public exprotWord() {
     // รูปแบบเอกสาร
@@ -154,21 +154,36 @@ export class AppComponent {
           new Paragraph({
             indent:{
               // firstLine:-convertInchesToTwip(0.6),
-              firstLine:convertInchesToTwip(0.6),
+              firstLine:convertInchesToTwip(0.8),
               start:convertInchesToTwip(0)
             },
             // tabStops: [{type: TabStopType.LEFT, position: 500},{type: TabStopType.RIGHT,position: TabStopPosition.MAX}],
             children: [
               new TextRun({
-                text: `เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา
-                เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา
-                เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา
-                เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา
-                เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา  เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา เนื้องหา
-                เนื้องหา`,
+                text: `ตามมติที่ประชุมคณะกรรมการกองทุนสำรองเลี้ยงซีพ มหาวิทยาลัยมหาสารคาม คราวประชุม
+                ครั้งที่ 1/2564 เมื่อวันที่ 17 กุมภาพันธ์ 2566 เวลา 10.00 น. ณ ห้องประชุมกองคลังและพัสดุ ขั้น 2 อาคาร
+                บรมราชกุมารี สำนักงานอธิการบดี ได้พิจารณา Model เกี่ยวกับการเพิ่มเงินนำส่งเงินสะสมและเงินสมทบ
+                เข้ากองทุนสำรองเลี้ยงชีพ มหาวิทยาลัยมหาสารคาม นั้น`,
                 font: this.DOC_DEFAULT_FONT,
                 size: 32,
-                underline: { type: UnderlineType.DOTTED, color: "gray" },
+              }),
+            ],
+            alignment: AlignmentType.LEFT,
+          }),
+          new Paragraph({
+            indent:{
+              // firstLine:-convertInchesToTwip(0.6),
+              firstLine:convertInchesToTwip(0.8),
+              start:convertInchesToTwip(0)
+            },
+            // tabStops: [{type: TabStopType.LEFT, position: 500},{type: TabStopType.RIGHT,position: TabStopPosition.MAX}],
+            children: [
+              new TextRun({
+                text: `ในการนี้ ฝ่ายเลขานุการ จึงใคร่ขอสำรวจความคิดเห็นสมาชิกกองทุนสำรองเลี้ยงชีพเกี่ยวกับ
+                การเพิ่มเงินนำส่งเงินสะสมและเงินสมทบเข้ากองทุนสำรองเลี้ยงชีพ มหาวิทยาลัยมหาสารคาม โดยให้สมาชิก
+                กองทุนสำรองเลี้ยงชีพตอบแบบสำรวจความคิดเห็นผ่าน QR-Code ที่แนบมาพร้อมนี้`,
+                font: this.DOC_DEFAULT_FONT,
+                size: 32,
               }),
             ],
             alignment: AlignmentType.LEFT,
